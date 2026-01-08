@@ -1,6 +1,6 @@
 import { SortableContext, verticalListSortingStrategy, useSortable } from "@dnd-kit/sortable";
 import type { Column, Task, Id } from "../types";
-import TaskCard from "./Taskcard"
+import TaskCard from "./TaskCard.tsx"
 import { useMemo, useState } from "react";
 
 interface Props {
@@ -50,4 +50,5 @@ export default function ColumnContainer({ column, tasks, createTask, deleteTask,
       </button>
     </div>
   );
+
 }
