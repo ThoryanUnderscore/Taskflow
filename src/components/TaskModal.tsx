@@ -1,4 +1,4 @@
-import type { Task, Id } from "../types";
+import type { Task } from "../types";
 import { useState } from "react";
 
 interface Props {
@@ -56,4 +56,5 @@ export default function TaskModal({ task, isOpen, onClose, onSave }: Props) {
       </div>
     </div>
   );
+
 }
