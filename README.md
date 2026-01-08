@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 🚀 TaskFlow - Modern Trello Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**TaskFlow** est une application de gestion de tâches performante, construite avec **React 18**, **TypeScript** et **Tailwind CSS v4**. Elle permet une organisation fluide via un système de Drag-and-Drop intuitif.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## ✨ Fonctionnalités
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- 🏗️ **Système de Drag-and-Drop** : Déplacement fluide des tâches entre les colonnes grâce à `@dnd-kit`.
+- 📝 **Gestion Complète des Tâches** : Création, modification (via modale) et suppression.
+- 🎨 **Design Moderne** : Interface sombre type "SaaS" avec effets de flou (Glassmorphism) et animations.
+- 💾 **Persistance des données** : Sauvegarde automatique de votre tableau dans le `LocalStorage`.
+- ⚡ **Performance** : Build ultra-rapide avec Vite et SWC.
 
-## Expanding the ESLint configuration
+## 🛠️ Stack Technique
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend** : React 18, TypeScript
+- **Styling** : Tailwind CSS v4 (nouvelle architecture Engine-first)
+- **Drag & Drop** : @dnd-kit (Core, Sortable, Utilities)
+- **Outils de Build** : Vite.js, SWC
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Installation et Lancement
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Cloner le dépôt** :
+   ```bash
+   git clone [https://github.com/VOTRE_PSEUDO/taskflow.git](https://github.com/VOTRE_PSEUDO/taskflow.git)
+   cd taskflow
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Installer les dépendances :
+Bash
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Lancer le serveur de développement :
+Bash
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    npm run dev
+
+📸 Aperçu
+<img width="1868" height="915" alt="image" src="https://github.com/user-attachments/assets/0851c753-a7f8-4ce2-87db-0d5056ea80d6" />
+
+
+    Double-cliquez sur une carte pour modifier son titre et sa description.
+    Double-cliquez sur le titre de la colonne pour modifier son nom.
+
+    Glissez-déposez pour changer l'ordre ou la catégorie.
+
+
+📝 Licence
+
+Distribué sous la licence MIT. Voir LICENSE pour plus d'informations.
+
+Projet réalisé dans le cadre d'un renforcement de compétences en développement Frontend moderne.
+
+
+PS : 
+Améliorations prévues :
+- Système de multi-sauvegardes de listes
+- Ajouter des collaborateurs à la liste en gardant le dynamisme
